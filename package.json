@@ -1,19 +1,25 @@
 {
   "name": "rancher-desktop",
-  "productName": "Rancher Desktop",
+  "productName": "Rancher Desktop (Redwood)",
   "license": "Apache-2.0",
   "version": "1.17.1",
-  "author": {
-    "name": "SUSE",
-    "email": "containers@suse.com"
-  },
+  "authors": [
+    {
+      "name": "SUSE",
+      "email": "containers@suse.com"
+    },
+    {
+      "name": "Incanta Games",
+      "email": "redwood@incanta.games"
+    }
+  ],
   "engines": {
     "node": "20.16.0"
   },
   "packageManager": "yarn@1.22.21",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rancher-sandbox/rancher-desktop.git"
+    "url": "https://github.com/redwoodmmo/rancher-desktop.git"
   },
   "scripts": {
     "dev": "node scripts/ts-wrapper.js scripts/dev.ts",

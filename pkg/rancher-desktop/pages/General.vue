@@ -4,14 +4,12 @@
 <template>
   <div class="general">
     <div>
-      <ul>
-        <li>Project Discussions: <b>#rancher-desktop</b> in <a href="https://slack.rancher.io/">Rancher Users</a> Slack</li>
-        <li class="project-links">
-          <span>Project Links:</span>
-          <a href="https://github.com/rancher-sandbox/rancher-desktop">Homepage</a>
-          <a href="https://github.com/rancher-sandbox/rancher-desktop/issues">Issues</a>
-        </li>
-      </ul>
+      <br />
+      This edition of Rancher Desktop is forked and redistributed by Incanta Games to support Redwood.<br />
+      The last common version with the official Rancher Desktop is <strong>1.14.2</strong>.<br />
+      <br />
+      If you're having issues with this edition of Rancher Desktop, report them to Incanta Games in our
+      <a href="https://discord.gg/Gj23MHhCQR" target="_blank">Discord server</a>.
     </div>
     <hr>
     <update-status

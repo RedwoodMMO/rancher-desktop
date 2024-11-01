@@ -19,7 +19,7 @@ export default Vue.extend({
   computed: {
     getTooltip(): { content: string, placement: string, classes: string } {
       return {
-        content:   `<b>${ this.t('product.version') }</b>: ${ this.version }`,
+        content:   `<b>${ this.t('product.version') }</b>: ${ this.version } (Redwood)`,
         placement: 'top',
         classes:   'tooltip-footer',
       };
@@ -52,7 +52,7 @@ export default Vue.extend({
     <span
       class="item-value"
     >
-      {{ version }}
+      {{ version }} (Redwood)
     </span>
   </span>
 </template>
