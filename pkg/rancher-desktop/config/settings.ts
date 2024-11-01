@@ -72,7 +72,7 @@ export const defaultSettings = {
     pathManagementStrategy: process.platform === 'win32' ? PathManagementStrategy.Manual : PathManagementStrategy.RcFiles,
     telemetry:              { enabled: true },
     /** Whether we should check for updates and apply them. */
-    updater:                { enabled: true },
+    updater:                { enabled: false },
     autoStart:              false,
     startInBackground:      false,
     hideNotificationIcon:   false,
@@ -95,7 +95,7 @@ export const defaultSettings = {
     version: '',
     port:    6443,
     enabled: true,
-    options: { traefik: true, flannel: true },
+    options: { traefik: false, flannel: true },
     ingress: { localhostOnly: false },
   },
   portForwarding: { includeKubernetesServices: false },
