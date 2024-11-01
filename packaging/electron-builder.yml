@@ -41,6 +41,8 @@ linux:
   artifactName: ${name}-${version}-linux.zip
   target: [ zip ]
 publish:
-  provider: custom
-  upgradeServer: https://desktop.version.rancher.io/v1/checkupgrade
-  vPrefixedTagName: true
+  provider: github
+  owner: redwoodmmo
+  repo: rancher-desktop
+  channel: latest
+  vPrefixedTagName: false

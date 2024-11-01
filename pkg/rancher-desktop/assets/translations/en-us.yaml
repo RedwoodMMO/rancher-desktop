@@ -288,7 +288,7 @@ portForwarding:
   sortableTables:
     noRows: There are no port forwarding entries to show
 general:
-  title: Welcome to Rancher Desktop by SUSE
+  title: Welcome to Rancher Desktop by SUSE (Redistributed by Redwood)
   description: Rancher Desktop provides Kubernetes and image management through the use of a desktop application.
 about:
   title: About
@@ -330,7 +330,7 @@ application:
 virtualMachine:
   networkingTunnel:
     legend: Networking Tunnel
-    label: Enable networking tunnel
+    label: "Enable networking tunnel (WARNING: this breaks Agones for Redwood)"
   mount:
     type:
       legend: Mount Type

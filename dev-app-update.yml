@@ -1,6 +1,6 @@
-owner: rancher-sandbox
+owner: redwoodmmo
 repo: rancher-desktop
 updaterCacheDirName: rancher-desktop
-provider: custom
-upgradeServer: https://desktop.version.rancher.io/v1/checkupgrade
-vPrefixedTagName: true
+provider: github
+channel: latest
+vPrefixedTagName: false

@@ -173,7 +173,7 @@ export default Vue.extend({
       legend-text="Options"
     >
       <rd-checkbox
-        label="Enable Traefik"
+        label="Enable Traefik (enabling breaks Redwood)"
         :disabled="isKubernetesDisabled"
         :value="preferences.kubernetes.options.traefik"
         :is-locked="isPreferenceLocked('kubernetes.options.traefik')"

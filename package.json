@@ -1,18 +1,21 @@
 {
   "name": "rancher-desktop",
-  "productName": "Rancher Desktop",
+  "productName": "Rancher Desktop (Redwood)",
   "license": "Apache-2.0",
-  "version": "1.14.2",
-  "author": {
-    "name": "SUSE",
-    "email": "containers@suse.com"
-  },
-  "engines": {
-    "node": ">=18.16"
-  },
+  "version": "1.15.0",
+  "authors": [
+    {
+      "name": "SUSE",
+      "email": "containers@suse.com"
+    },
+    {
+      "name": "Incanta Games",
+      "email": "redwood@incanta.games"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rancher-sandbox/rancher-desktop.git"
+    "url": "https://github.com/redwoodmmo/rancher-desktop.git"
   },
   "scripts": {
     "dev": "node scripts/ts-wrapper.js scripts/dev.ts",
@@ -139,6 +142,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
     "babel-jest": "27.5.1",
+    "babel-loader": "^9.2.1",
     "cross-env": "7.0.3",
     "css-loader": "7.1.1",
     "ejs": "3.1.10",
@@ -165,6 +169,7 @@
     "sass": "1.75.0",
     "sass-loader": "14.2.1",
     "ts-jest": "29.1.2",
+    "ts-loader": "^9.5.1",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "4.5.5",
