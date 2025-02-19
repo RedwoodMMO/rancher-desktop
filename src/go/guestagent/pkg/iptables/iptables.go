@@ -102,27 +102,31 @@ func (i *Iptables) ForwardPorts() error {
 
 		// Add new forwards
 		for _, p := range added {
+			port := strconv.Itoa(p.Port)
+			var protocol string
 			if p.TCP {
-				port := strconv.Itoa(p.Port)
-				portMapKey, err := nat.NewPort("tcp", port)
-				if err != nil {
-					log.Errorf("failed to create a corresponding key for the portMap: %s", err)
-					continue
-				}
-				portBinding := nat.PortBinding{
-					HostIP:   i.listenerIP.String(),
-					HostPort: port,
-				}
-				if _, ok := portMap[portMapKey]; !ok {
-					portMap[portMapKey] = []nat.PortBinding{portBinding}
-				}
-				name := entryToString(p)
-				if err := i.apiTracker.Add(utils.GenerateID(name), portMap); err != nil {
-					log.Errorf("iptables scanner failed to forward portmap for %s: %s", name, err)
-					continue
-				}
-				log.Infof("iptables scanner forwarded portmap for %s", name)
+				protocol = "tcp"
+			} else {
+				protocol = "udp"
 			}
+			portMapKey, err := nat.NewPort(protocol, port)
+			if err != nil {
+				log.Errorf("failed to create a corresponding key for the portMap: %s", err)
+				continue
+			}
+			portBinding := nat.PortBinding{
+				HostIP:   i.listenerIP.String(),
+				HostPort: port,
+			}
+			if _, ok := portMap[portMapKey]; !ok {
+				portMap[portMapKey] = []nat.PortBinding{portBinding}
+			}
+			name := entryToString(p)
+			if err := i.apiTracker.Add(utils.GenerateID(name), portMap); err != nil {
+				log.Errorf("iptables scanner failed to forward portmap for %s: %s", name, err)
+				continue
+			}
+			log.Infof("iptables scanner forwarded portmap for %s", name)
 		}
 	}
 }
