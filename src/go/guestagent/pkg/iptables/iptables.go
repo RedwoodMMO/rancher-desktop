@@ -102,11 +102,14 @@ func (i *Iptables) ForwardPorts() error {
 
 		// Add new forwards
 		for _, p := range added {
-			if !p.TCP {
-				continue
-			}
 			port := strconv.Itoa(p.Port)
-			portMapKey, err := nat.NewPort("tcp", port)
+			var protocol string
+			if p.TCP {
+				protocol = "tcp"
+			} else {
+				protocol = "udp"
+			}
+			portMapKey, err := nat.NewPort(protocol, port)
 			if err != nil {
 				log.Errorf("failed to create a corresponding key for the portMap: %s", err)
 				continue
