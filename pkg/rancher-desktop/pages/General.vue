@@ -6,7 +6,6 @@
     <div>
       <br />
       This edition of Rancher Desktop is forked and redistributed by Incanta Games to support Redwood.<br />
-      The last common version with the official Rancher Desktop is <strong>1.14.2</strong>.<br />
       <br />
       If you're having issues with this edition of Rancher Desktop, report them to Incanta Games in our
       <a href="https://discord.gg/Gj23MHhCQR" target="_blank">Discord server</a>.
