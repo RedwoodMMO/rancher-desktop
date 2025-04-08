@@ -109,6 +109,7 @@ func (i *Iptables) ForwardPorts() error {
 			} else {
 				protocol = "udp"
 			}
+			log.Debugf("iptables scanner found new port %s with protocol %s", entryToString(p), protocol)
 			portMapKey, err := nat.NewPort(protocol, port)
 			if err != nil {
 				log.Errorf("failed to create a corresponding key for the portMap: %s", err)
